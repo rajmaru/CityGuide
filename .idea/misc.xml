@@ -4,9 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1335" />
+        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/drawable/ic_arrow.xml" value="0.1335" />
+        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/drawable/start_button_background.xml" value="0.1335" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/activity_first.xml" value="0.1" />
+        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/activity_fullscreen.xml" value="0.1" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.21" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
+        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/activity_user_dashboard.xml" value="0.22" />
+        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/onboarding_screen_layout.xml" value="0.2" />
+        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/slider_layout.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/user_dashboard.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/mipmap-anydpi-v26/cityguide_splashscreen.xml" value="0.1335" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1335" />

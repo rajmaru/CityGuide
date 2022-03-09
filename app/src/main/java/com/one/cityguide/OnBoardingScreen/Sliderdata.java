@@ -1,4 +1,4 @@
-package com.one.cityguide.Common;
+package com.one.cityguide.OnBoardingScreen;
 
 public class Sliderdata {
 

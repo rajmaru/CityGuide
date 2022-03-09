@@ -1,4 +1,4 @@
-package com.one.cityguide.Common;
+package com.one.cityguide.OnBoardingScreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -6,14 +6,13 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.one.cityguide.R;
-import com.one.cityguide.UserDashboard;
+import com.one.cityguide.User.UserDashboard;
 
 import java.util.ArrayList;
 

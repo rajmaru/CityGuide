@@ -2,17 +2,13 @@ package com.one.cityguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import com.one.cityguide.Common.OnBoardingScreen;
-import com.one.cityguide.Common.SliderAdapter;
-import com.one.cityguide.Common.Sliderdata;
-
-import java.util.ArrayList;
+import com.one.cityguide.OnBoardingScreen.OnBoardingScreen;
+import com.one.cityguide.User.UserDashboard;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (isFirstTime) {
             SharedPreferences.Editor editor = onBoardingScreen.edit();
-            editor.putBoolean("isFirstTime", true);
+            editor.putBoolean("isFirstTime", false);
             editor.apply();
             startActivity(new Intent(this, OnBoardingScreen.class));
         } else {

@@ -29,8 +29,8 @@
             android:layout_height="30dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:tint="@color/white"
-            app:srcCompat="@drawable/ic_menu" />
+            app:srcCompat="@drawable/ic_menu"
+            app:tint="@color/white" />
 
         <TextView
             android:id="@+id/appName"
@@ -53,8 +53,8 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="false"
             android:layout_centerVertical="true"
-            android:tint="@color/white"
-            app:srcCompat="@drawable/ic_add" />
+            app:srcCompat="@drawable/ic_add"
+            app:tint="@color/white" />
     </RelativeLayout>
 
     <ScrollView
@@ -125,7 +125,7 @@
                 android:layout_width="65dp"
                 android:layout_height="65dp"
                 android:layout_marginTop="32dp"
-                android:background="@drawable/card1"
+                android:background="@drawable/featured_buttons_gradient"
                 android:elevation="6dp"
                 android:padding="15dp"
                 app:layout_constraintEnd_toStartOf="@+id/hotelsButton"
@@ -153,7 +153,7 @@
                 android:id="@+id/hotelsButton"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:background="@drawable/card1"
+                android:background="@drawable/featured_buttons_gradient"
                 android:elevation="6dp"
                 android:padding="15dp"
                 app:layout_constraintBottom_toBottomOf="@+id/restaurantButton"
@@ -182,7 +182,7 @@
                 android:id="@+id/educationButton"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:background="@drawable/card1"
+                android:background="@drawable/featured_buttons_gradient"
                 android:elevation="6dp"
                 android:padding="15dp"
                 app:layout_constraintBottom_toBottomOf="@+id/hotelsButton"
@@ -211,7 +211,7 @@
                 android:id="@+id/shopsButton"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:background="@drawable/card1"
+                android:background="@drawable/featured_buttons_gradient"
                 android:elevation="6dp"
                 android:padding="15dp"
                 app:layout_constraintBottom_toBottomOf="@+id/educationButton"
@@ -320,32 +320,35 @@
                 android:layout_marginEnd="24dp"
                 android:fontFamily="@font/gilroy_light"
                 android:text="view all"
-                android:textColor="#423F3F"
+                android:textColor="#363434"
                 app:layout_constraintBottom_toBottomOf="@+id/mostViewed_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/mostViewed_title" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/mostViewed_Recycler"
+                android:id="@+id/mostViewed_recycler"
                 android:layout_width="0dp"
-                android:layout_height="183dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="@+id/mostViewed_viewAll"
-                app:layout_constraintStart_toStartOf="@+id/mostViewed_title"
-                app:layout_constraintTop_toBottomOf="@+id/mostViewed_title" />
+                android:layout_height="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mostViewed_title"
+                tools:listitem="@layout/mostviewed_sample_layout" />
 
-            <!-- Most Viewed -->
+            <!-- Categories -->
             <TextView
                 android:id="@+id/categories_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
                 android:fontFamily="@font/gilroy_bold"
                 android:text="Categories"
                 android:textColor="@color/text_black"
                 android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="@+id/mostViewed_title"
-                app:layout_constraintTop_toBottomOf="@+id/mostViewed_Recycler" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mostViewed_recycler" />
 
             <TextView
                 android:id="@+id/categories_viewAll"
@@ -354,20 +357,24 @@
                 android:layout_marginEnd="24dp"
                 android:fontFamily="@font/gilroy_light"
                 android:text="view all"
-                android:textColor="#423F3F"
+                android:textColor="#363434"
                 app:layout_constraintBottom_toBottomOf="@+id/categories_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/categories_title" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categories_recycler"
                 android:layout_width="0dp"
-                android:layout_height="183dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="32dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/categories_viewAll"
-                app:layout_constraintStart_toStartOf="@+id/categories_title"
-                app:layout_constraintTop_toBottomOf="@+id/categories_title" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categories_title"
+                tools:listitem="@layout/categories_sample_layout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

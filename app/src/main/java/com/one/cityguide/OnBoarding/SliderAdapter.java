@@ -1,4 +1,4 @@
-package com.one.cityguide.OnBoardingScreen;
+package com.one.cityguide.OnBoarding;
 
 import android.content.Context;
 import android.view.LayoutInflater;

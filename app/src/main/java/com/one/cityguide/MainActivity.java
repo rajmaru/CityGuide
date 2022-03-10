@@ -7,12 +7,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import com.one.cityguide.OnBoardingScreen.OnBoardingScreen;
+import com.one.cityguide.OnBoarding.OnBoardingScreen;
 import com.one.cityguide.User.UserDashboard;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    SharedPreferences onBoardingScreen;
+    SharedPreferences onBoardingPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         SplashScreen.installSplashScreen(this);
         setContentView(R.layout.activity_main);
 
-        onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE);
-        boolean isFirstTime = onBoardingScreen.getBoolean("isFirstTime", true);
+        onBoardingPreferences = getSharedPreferences("onBoardingScreen", MODE_PRIVATE);
+        boolean isFirstTime = onBoardingPreferences.getBoolean("isFirstTime", true);
 
         if (isFirstTime) {
-            SharedPreferences.Editor editor = onBoardingScreen.edit();
+            SharedPreferences.Editor editor = onBoardingPreferences.edit();
             editor.putBoolean("isFirstTime", false);
             editor.apply();
             startActivity(new Intent(this, OnBoardingScreen.class));

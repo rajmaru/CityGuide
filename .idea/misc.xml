@@ -6,6 +6,7 @@
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1335" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/drawable/action_bar_gradient.xml" value="0.1335" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/drawable/card1.xml" value="0.1335" />
+        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/drawable/categories_sample_layout.xml" value="0.1335" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/drawable/featured_cards_corner.xml" value="0.1335" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/drawable/featured_cover_gradient.xml" value="0.1335" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/drawable/ic_arrow.xml" value="0.1335" />
@@ -17,8 +18,10 @@
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.21" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
-        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/activity_user_dashboard.xml" value="0.22" />
+        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/activity_user_dashboard.xml" value="0.5" />
+        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/categories_sample_layout.xml" value="0.22" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/featured_sample_layout.xml" value="0.5" />
+        <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/mostviewed_sample_layout.xml" value="0.33" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/onboarding_screen_layout.xml" value="0.2" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/slider_layout.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/RAJ/AndroidStudioProjects/CityGuide/app/src/main/res/layout/user_dashboard.xml" value="0.17083333333333334" />

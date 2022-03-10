@@ -1,4 +1,4 @@
-package com.one.cityguide.OnBoardingScreen;
+package com.one.cityguide.OnBoarding;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;

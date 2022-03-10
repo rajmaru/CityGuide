@@ -13,7 +13,7 @@
             android:name=".User.UserDashboard"
             android:exported="false" />
         <activity
-            android:name=".Common.com.one.cityguide.OnBoardingScreen"
+            android:name=".OnBoarding.OnBoardingScreen"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

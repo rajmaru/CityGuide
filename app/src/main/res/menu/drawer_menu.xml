@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_nav_home"
+            android:title="Home"/>
+
+        <item android:id="@+id/nav_search"
+            android:icon="@drawable/ic_search"
+            android:title="Search"/>
+
+        <item android:id="@+id/nav_allCategories"
+        android:icon="@drawable/ic_nav_allcategories"
+        android:title="All Categories"/>
+
+        <item android:id="@+id/nav_addMissingPlace"
+            android:icon="@drawable/ic_nav_addlocation"
+            android:title="Add Missing Place"/>
+
+    </group>
+
+    <item android:title="Profile">
+
+        <menu >
+
+            <group android:checkableBehavior="single">
+
+                <item android:title="Log in"
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/ic_nav_login"/>
+
+                <item android:title="Profile"
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/ic_nav_profile"/>
+
+                <item android:title="Log out"
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_nav_logout"/>
+
+            </group>
+
+        </menu>
+
+    </item>
+
+    <item android:title="Categories">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item android:title="Restaurants"
+                    android:id="@+id/nav_restaurants"
+                    android:icon="@drawable/ic_restaurant"/>
+
+                <item android:title="Hotels"
+                    android:id="@+id/nav_hotels"
+                    android:icon="@drawable/ic_hotel"/>
+
+                <item android:title="Education"
+                    android:id="@+id/nav_education"
+                    android:icon="@drawable/ic_education"/>
+
+                <item android:title="Shops"
+                    android:id="@+id/nav_shops"
+                    android:icon="@drawable/ic_shop"/>
+
+            </group>
+
+        </menu>
+
+    </item>
+
+    <item android:title="Share">
+
+        <menu>
+
+            <group android:checkableBehavior="none">
+
+                <item android:title="Share"
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_nav_share"/>
+
+                <item android:title="Rate us"
+                    android:id="@+id/nav_rateus"
+                    android:icon="@drawable/ic_nav_rateus"/>
+
+            </group>
+
+        </menu>
+
+    </item>
+
+</menu>

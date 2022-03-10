@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="340dp"
     android:layout_height="175dp"
     android:layout_margin="10dp"
@@ -11,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp">
+        android:padding="12dp">
 
         <ImageView
             android:id="@+id/mostviewed_image"
@@ -28,13 +29,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/gilroy_bold"
             android:text="Dominos"
             android:textColor="@color/text_black"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/mostviewed_image"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/mostviewed_image" />
 
         <RatingBar
             android:id="@+id/mostviewed_ratingbar"
@@ -53,8 +53,8 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
             android:ellipsize="end"
-            android:ems="6"
             android:fontFamily="@font/gilroy_light"
+            android:maxLines="5"
             android:text="hdfih ahdgfyuy uyugaud agfhi iauohgfu"
             android:textAlignment="viewStart"
             android:textColor="#434040"

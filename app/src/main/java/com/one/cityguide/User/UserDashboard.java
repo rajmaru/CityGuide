@@ -1,11 +1,15 @@
 package com.one.cityguide.User;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import com.google.android.material.navigation.NavigationView;
 import com.one.cityguide.Categories.CategoriesAdapter;
 import com.one.cityguide.Categories.CategoriesData;
 import com.one.cityguide.FeaturedLocation.FeaturedAdapter;
@@ -30,12 +34,17 @@ public class UserDashboard extends AppCompatActivity {
     ArrayList<MostViewedData> mostViewedDataList;
     ArrayList<CategoriesData> categoriesDataList;
 
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_dashboard);
 
         hooks();
+
+        navigationDrawer();
 
         setFeaturedData();
         setMostViewedData();
@@ -47,11 +56,31 @@ public class UserDashboard extends AppCompatActivity {
 
     }
 
+    private void navigationDrawer() {
+        navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+
+                }
+                return true;
+            }
+        });
+        navigationView.setCheckedItem(R.id.nav_home);
+    }
+
     private void hooks() {
+        drawerLayout = findViewById(R.id.drawerlayout);
+        navigationView = findViewById(R.id.navigationview);
     }
 
     private void setFeaturedData() {
         featuredDataList = new ArrayList<>();
+        featuredDataList.add(new FeaturedData(R.drawable.mc_donalds, "Mc Donald's", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
+        featuredDataList.add(new FeaturedData(R.drawable.kfc, "KFC", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
+        featuredDataList.add(new FeaturedData(R.drawable.dominos, "Dominos", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
+        featuredDataList.add(new FeaturedData(R.drawable.pizza_hut, "Pizza Hut", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
         featuredDataList.add(new FeaturedData(R.drawable.mc_donalds, "Mc Donald's", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
         featuredDataList.add(new FeaturedData(R.drawable.kfc, "KFC", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
         featuredDataList.add(new FeaturedData(R.drawable.dominos, "Dominos", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
@@ -64,6 +93,10 @@ public class UserDashboard extends AppCompatActivity {
         mostViewedDataList.add(new MostViewedData(R.drawable.kfc, "KFC", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
         mostViewedDataList.add(new MostViewedData(R.drawable.dominos, "Dominos", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
         mostViewedDataList.add(new MostViewedData(R.drawable.pizza_hut, "Pizza Hut", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
+        mostViewedDataList.add(new MostViewedData(R.drawable.mc_donalds, "Mc Donald's", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
+        mostViewedDataList.add(new MostViewedData(R.drawable.kfc, "KFC", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
+        mostViewedDataList.add(new MostViewedData(R.drawable.dominos, "Dominos", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
+        mostViewedDataList.add(new MostViewedData(R.drawable.pizza_hut, "Pizza Hut", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
     }
 
     private void setCategoriesData() {
@@ -72,7 +105,6 @@ public class UserDashboard extends AppCompatActivity {
         categoriesDataList.add(new CategoriesData("Restaurant", R.drawable.categories_restaurant));
         categoriesDataList.add(new CategoriesData("Hotels", R.drawable.categories_hotel));
         categoriesDataList.add(new CategoriesData("Shops", R.drawable.categories_shop));
-
     }
 
     private void featuredRecycler() {

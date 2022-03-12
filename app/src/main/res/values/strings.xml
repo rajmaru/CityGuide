@@ -9,4 +9,14 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="search">Search...</string>
+    <string name="enter_your_number">Enter Your Number</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="Password">Password</string>
+    <string name="Username">Username</string>
+    <string name="FullName">Full Name</string>
+    <string name="Email">Email</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="Others">Others</string>
+    <string name="PhoneNumber">Phone Number</string>
 </resources>

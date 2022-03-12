@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
-    <style name="navigationTheme">
-
+    <!-- Navigation Theme -->
+    <style name="navigationTheme" parent="Widget.Material3.DrawerLayout">
         <item name="colorPrimary">@color/white</item>
         <item name="colorControlHighlight">#E42E50</item>
         <item name="checkedIconTint">@color/white</item>
         <item name="android:textColorSecondary">@color/black</item>
         <item name="android:textColorPrimary">@color/black</item>
-
     </style>
-    
+
+    <!-- EditText Theme -->
+    <style name="EditText.BoxStrokeColor" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/textinput_boxstroke_color</item>
+    </style>
+
+    <!-- RadioButton Theme-->
+    <style name="RadioButton.TintColor" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/radio_button_tint</item>
+    </style>
+
 </resources>

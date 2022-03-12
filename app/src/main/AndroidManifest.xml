@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CityGuide">
         <activity
+            android:name=".LoginAndSignup.RetailerSignup"
+            android:theme="@style/Theme.LoginAndSignup"
+            android:exported="false"/>
+        <activity
+            android:name=".LoginAndSignup.RetailerLoginAndSignup"
+            android:theme="@style/Theme.LoginAndSignup"
+            android:exported="false" />
+        <activity
+            android:name=".LoginAndSignup.RetailerLogin"
+            android:theme="@style/Theme.LoginAndSignup"
+            android:exported="false" />
+        <activity
+            android:name=".AllCategoriesActivity"
+            android:exported="false" />
+        <activity
             android:name=".User.UserDashboard"
             android:exported="false" />
         <activity

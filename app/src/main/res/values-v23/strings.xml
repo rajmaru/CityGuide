@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="Start">Start</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="Password">Password</string>
+    <string name="Username">Username</string>
+    <string name="FullName">Full Name</string>
+    <string name="Email">Email</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
 </resources>

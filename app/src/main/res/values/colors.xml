@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="text_black">#212020</color>
+    <color name="light_gray">#504D4D</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#EF4264</color>
-    <color name="colorPrimaryDark">#B91132</color>
-    <color name="colorOnPrimary">#272727</color>
-    <color name="light_gray">#BBB5B5</color>
-    <color name="text_black">#151515</color>
-    <color name="app_name">#D1193D</color>
+    <color name="colorPrimary">#F9F7F7</color>
+    <color name="colorOnPrimary">#3F72AF</color>
+    <color name="colorSecondary">#112D4E</color>
+    <color name="colorOnSecondary">#DBE2EF</color>
+
 </resources>

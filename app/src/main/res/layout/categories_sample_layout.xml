@@ -14,7 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/featured_cover_gradient">
+        android:background="@color/white">
 
         <TextView
             android:id="@+id/categories_title"
@@ -24,7 +24,7 @@
             android:layout_marginTop="14dp"
             android:fontFamily="@font/gilroy_bold"
             android:text="Education"
-            android:textColor="@color/white"
+            android:textColor="@color/colorSecondary"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

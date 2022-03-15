@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/gilroy_bold"
         android:text="Search Your Location"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorSecondary"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/slider_image"
         app:layout_constraintStart_toStartOf="@+id/slider_image"

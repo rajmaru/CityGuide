@@ -10,13 +10,14 @@
     </style>
 
     <!-- EditText Theme -->
-    <style name="EditText.BoxStrokeColor" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <style name="EditText.Color" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/textinput_boxstroke_color</item>
+        <item name="iconTint">@color/textinput_boxstroke_color</item>
     </style>
 
-    <!-- RadioButton Theme-->
-    <style name="RadioButton.TintColor" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/radio_button_tint</item>
+    <!-- Shapeable ImageView -->
+    <style name="ShapeAppearanceOverlay.App.CornerSize5percent" parent="">
+        <item name="cornerSize">5%</item>
     </style>
 
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_page_gradient"
+    android:background="@color/colorPrimary"
     tools:context=".LoginAndSignup.RetailerLoginAndSignup">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/gilroy_bold"
         android:text="Grow Your Business"
-        android:textColor="@color/white"
+        android:textColor="@color/colorSecondary"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -33,7 +33,7 @@
         android:fontFamily="@font/gilroy_light"
         android:gravity="start"
         android:text="We will help you to grow your business using online services!"
-        android:textColor="@color/white"
+        android:textColor="@color/colorSecondary"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -49,15 +49,15 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
+        app:elevation="8dp"
         android:text="Sign up"
-        android:textColor="@color/text_black"
-        app:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/colorSecondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCheckBox"
-        app:rippleColor="@color/colorPrimary" />
+        app:rippleColor="@color/colorOnPrimary" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/retailer_login_btn"
@@ -68,13 +68,14 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:text="Login"
-        android:textColor="@color/text_black"
-        app:backgroundTint="@color/white"
+        app:elevation="8dp"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/colorSecondary"
         app:layout_constraintBottom_toTopOf="@+id/retailer_signup_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="@color/colorPrimary" />
+        app:rippleColor="@color/colorOnPrimary" />
 
     <ImageView
         android:id="@+id/backBtn"
@@ -84,10 +85,10 @@
         android:layout_centerVertical="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:tint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back_btn" />
+        app:srcCompat="@drawable/ic_back_btn"
+        app:tint="@color/colorSecondary" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

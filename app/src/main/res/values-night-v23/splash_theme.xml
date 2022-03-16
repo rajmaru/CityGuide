@@ -3,13 +3,13 @@
 
     <style name="Theme.CustomSplashScreen" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/colorSecondary</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splashscreen_logo_and_branding_img</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splashscreen_logo</item>
         <item name="windowSplashScreenAnimationDuration">300</item>
         <item name="postSplashScreenTheme">@style/Theme.CityGuide</item>
 
         <!-- Status bar and Nav bar configs -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/colorSecondary</item>
         <item name="android:navigationBarColor">@color/colorSecondary</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 </resources>

@@ -44,7 +44,7 @@ public class UserDashboard extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
 
-    ImageView menu, retailer_login_and_signup;
+    ImageView menu, loginBtn_UserDashboard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +63,7 @@ public class UserDashboard extends AppCompatActivity {
         mostViewedRecycler();
         categoriesRecycler();
 
-        retailer_login_and_signup.setOnClickListener(new View.OnClickListener() {
+        loginBtn_UserDashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(UserDashboard.this, RetailerLoginAndSignup.class));
@@ -75,8 +75,8 @@ public class UserDashboard extends AppCompatActivity {
     private void hooks() {
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navigationview);
-        menu = findViewById(R.id.backBtn);
-        retailer_login_and_signup = findViewById(R.id.retailer_login_and_signup);
+        menu = findViewById(R.id.backBtn_RetailerLogin);
+        loginBtn_UserDashboard = findViewById(R.id.loginBtn_UserDashboard);
     }
 
     private void navigationDrawer() {
@@ -84,28 +84,30 @@ public class UserDashboard extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
-                    case R.id.nav_allCategories:
-                        startActivity(new Intent(UserDashboard.this, AllCategoriesActivity.class));
-                        break;
-                    case R.id.nav_login:
-                        startActivity(new Intent(UserDashboard.this, RetailerLogin.class));
-                        break;
-                    case R.id.nav_logout:
-                        startActivity(new Intent(UserDashboard.this, RetailerLoginAndSignup.class));
-                        break;
+                if (item.getItemId() == R.id.navAllCategoriesBtn) {
+                    startActivity(new Intent(UserDashboard.this, AllCategoriesActivity.class));
+                    finishAffinity();
+                } else if (item.getItemId() == R.id.navLoginBtn) {
+                    Intent intent = new Intent(UserDashboard.this, RetailerLogin.class);
+                    intent.putExtra("type", "userdashboard");
+                    startActivity(intent);
+                    finishAffinity();
+
+                } else if (item.getItemId() == R.id.navLogoutBtn) {
+                    startActivity(new Intent(UserDashboard.this, RetailerLoginAndSignup.class));
+                    finishAffinity();
 
                 }
                 return true;
             }
         });
-        navigationView.setCheckedItem(R.id.nav_home);
+        navigationView.setCheckedItem(R.id.navHomeBtn);
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(drawerLayout.isDrawerVisible(GravityCompat.START)){
+                if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
                     drawerLayout.closeDrawer(GravityCompat.START);
-                }else{
+                } else {
                     drawerLayout.openDrawer(GravityCompat.START);
                 }
             }
@@ -114,9 +116,9 @@ public class UserDashboard extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(drawerLayout.isDrawerVisible(GravityCompat.START)){
+        if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }else super.onBackPressed();
+        } else super.onBackPressed();
     }
 
     private void setFeaturedData() {
@@ -130,6 +132,7 @@ public class UserDashboard extends AppCompatActivity {
         featuredDataList.add(new FeaturedData(R.drawable.dominos, "Dominos", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
         featuredDataList.add(new FeaturedData(R.drawable.pizza_hut, "Pizza Hut", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
     }
+
     private void featuredRecycler() {
         featured_recycler = findViewById(R.id.featured_recycler);
         featured_adapter = new FeaturedAdapter(this, featuredDataList);
@@ -149,6 +152,7 @@ public class UserDashboard extends AppCompatActivity {
         mostViewedDataList.add(new MostViewedData(R.drawable.dominos, "Dominos", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
         mostViewedDataList.add(new MostViewedData(R.drawable.pizza_hut, "Pizza Hut", "near Bhyanadar (East), Thane - 401105, Mumbai, sdgfs asrgrgedg, erab"));
     }
+
     private void mostViewedRecycler() {
         mostViewed_recycler = findViewById(R.id.mostViewed_recycler);
         mostViewed_adapter = new MostViewedAdapter(this, mostViewedDataList);
@@ -164,6 +168,7 @@ public class UserDashboard extends AppCompatActivity {
         categoriesDataList.add(new CategoriesData("Hotels", R.drawable.categories_hotel));
         categoriesDataList.add(new CategoriesData("Shops", R.drawable.categories_shop));
     }
+
     private void categoriesRecycler() {
         categories_recycler = findViewById(R.id.categories_recycler);
         categories_adapter = new CategoriesAdapter(this, categoriesDataList);

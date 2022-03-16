@@ -10,7 +10,7 @@
 
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/slider"
+        android:id="@+id/slider_OnBoardingScreen"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,32 +19,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout_OnBoardingScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/startBtn"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/startBtn_OnBoardingScreen"
+        style="@style/Button.theme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/featured_buttons_gradient"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/gilroy_bold"
-        android:onClick="moveToDashboard"
         android:text="@string/Start"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="16sp"
         android:textStyle="bold"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/slider_OnBoardingScreen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

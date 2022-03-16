@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".LoginAndSignup.RetailerLoginAndSignup">
+    tools:context=".LoginAndSignup.RetailerSignup">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -20,13 +20,13 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/backBtn"
+                android:id="@+id/backBtn_RetailerSignup"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_back_btn"
@@ -37,18 +37,17 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:fontFamily="@font/gilroy_bold"
                 android:text="Sign up"
                 android:textColor="@color/colorSecondary"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toBottomOf="@+id/backBtn"
+                app:layout_constraintBottom_toBottomOf="@+id/backBtn_RetailerSignup"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/backBtn" />
+                app:layout_constraintTop_toTopOf="@+id/backBtn_RetailerSignup" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/fullname_inputlayout"
+                android:id="@+id/fullNameInputlayout_RetailerSignup"
                 style="@style/EditText.Color"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -66,6 +65,7 @@
                 app:startIconDrawable="@drawable/ic_edit">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullNameEditText_RetailerSignup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/gilroy_light"
@@ -76,7 +76,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/username_inputlayout"
+                android:id="@+id/usernameInputlayout_RetailerSignup"
                 style="@style/EditText.Color"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -90,10 +90,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fullname_inputlayout"
+                app:layout_constraintTop_toBottomOf="@+id/fullNameInputlayout_RetailerSignup"
                 app:startIconDrawable="@drawable/ic_username">
 
                 <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/usernameEditText_RetailerSignup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/gilroy_light"
@@ -104,7 +105,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/email_inputlayout"
+                android:id="@+id/emailInputlayout_RetailerSignup"
                 style="@style/EditText.Color"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -118,10 +119,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/username_inputlayout"
+                app:layout_constraintTop_toBottomOf="@+id/usernameInputlayout_RetailerSignup"
                 app:startIconDrawable="@drawable/ic_email">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEditText_RetailerSignup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/gilroy_light"
@@ -132,7 +134,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/password_inputlayout"
+                android:id="@+id/passwordInputlayout_RetailerSignup"
                 style="@style/EditText.Color"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -141,12 +143,11 @@
                 android:layout_marginEnd="32dp"
                 android:textColorHint="@color/light_gray"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/colorSecondary"
                 app:hintTextColor="@color/colorSecondary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/phonenumber_inputlayout"
+                app:layout_constraintTop_toBottomOf="@+id/phonenumberInputlayout_RetailerSignup"
                 app:startIconDrawable="@drawable/ic_password">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -160,16 +161,16 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <RadioGroup
-                android:id="@+id/radioGroup"
+                android:id="@+id/radioGroup_RetailerSignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:checkedButton="@+id/radio_button_1"
                 android:orientation="horizontal"
                 android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="@+id/password_inputlayout"
-                app:layout_constraintStart_toStartOf="@+id/password_inputlayout"
-                app:layout_constraintTop_toBottomOf="@+id/textView5">
+                app:layout_constraintEnd_toEndOf="@+id/passwordInputlayout_RetailerSignup"
+                app:layout_constraintStart_toStartOf="@+id/passwordInputlayout_RetailerSignup"
+                app:layout_constraintTop_toBottomOf="@+id/genderText_RetailerSignup">
 
                 <RadioButton
                     android:id="@+id/gender_male"
@@ -212,18 +213,18 @@
             </RadioGroup>
 
             <DatePicker
-                android:id="@+id/datePicker"
+                android:id="@+id/datePicker_RetailerSignup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:calendarViewShown="false"
                 android:datePickerMode="spinner"
-                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/DobText_RetailerSignup"
                 tools:layout_editor_absoluteX="0dp" />
 
 
             <com.hbb20.CountryCodePicker
-                android:id="@+id/countryCodePicker"
+                android:id="@+id/countryCodePicker_RetailerSignup"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginStart="32dp"
@@ -236,14 +237,14 @@
                 app:ccp_contentColor="@color/colorSecondary"
                 app:ccp_showNameCode="false"
                 app:ccp_textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/phonenumber_inputlayout"
-                app:layout_constraintEnd_toStartOf="@+id/phonenumber_inputlayout"
+                app:layout_constraintBottom_toBottomOf="@+id/phonenumberInputlayout_RetailerSignup"
+                app:layout_constraintEnd_toStartOf="@+id/phonenumberInputlayout_RetailerSignup"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/phonenumber_inputlayout"
+                app:layout_constraintTop_toTopOf="@+id/phonenumberInputlayout_RetailerSignup"
                 app:layout_constraintVertical_bias="0.0" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phonenumber_inputlayout"
+                android:id="@+id/phonenumberInputlayout_RetailerSignup"
                 style="@style/EditText.Color"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -253,10 +254,11 @@
                 app:boxCornerRadiusTopEnd="4dp"
                 app:hintTextColor="@color/colorSecondary"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/countryCodePicker"
-                app:layout_constraintTop_toBottomOf="@+id/email_inputlayout">
+                app:layout_constraintStart_toEndOf="@+id/countryCodePicker_RetailerSignup"
+                app:layout_constraintTop_toBottomOf="@+id/emailInputlayout_RetailerSignup">
 
                 <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/phonenumberEditText_RetailerSignup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/gilroy_light"
@@ -268,24 +270,22 @@
 
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/login_btn"
-                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:id="@+id/nextBtn_RetailerSignup"
+                style="@style/Button.theme"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                android:backgroundTint="@color/colorSecondary"
-                android:text="Sign up"
-                android:textColor="@color/white"
+                android:text="Next"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/datePicker"
-                app:rippleColor="@color/colorSecondary" />
+                app:layout_constraintTop_toBottomOf="@+id/datePicker_RetailerSignup"
+                app:rippleColor="@color/colorOnPrimary" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/loginBtn_RetailerSignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -295,13 +295,13 @@
                 android:textColor="@color/colorSecondary"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/login_btn"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
-                app:layout_constraintStart_toStartOf="@+id/login_btn"
-                app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nextBtn_RetailerSignup" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/genderText_RetailerSignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -309,20 +309,20 @@
                 android:text="Gender"
                 android:textColor="@color/colorSecondary"
                 android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="@+id/password_inputlayout"
-                app:layout_constraintTop_toBottomOf="@+id/password_inputlayout" />
+                app:layout_constraintStart_toStartOf="@+id/passwordInputlayout_RetailerSignup"
+                app:layout_constraintTop_toBottomOf="@+id/passwordInputlayout_RetailerSignup" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/DobText_RetailerSignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:fontFamily="@font/gilroy_light"
                 android:text="Date Of Birth"
                 android:textColor="@color/colorSecondary"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/textView5"
-                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/genderText_RetailerSignup"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup_RetailerSignup" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

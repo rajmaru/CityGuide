@@ -10,16 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CityGuide">
         <activity
-            android:name=".LoginAndSignup.RetailerSignup"
-            android:theme="@style/Theme.LoginAndSignup"
+            android:name=".LoginAndSignup.Password_Updated"
             android:exported="false"/>
         <activity
+            android:name=".LoginAndSignup.Set_New_Password"
+            android:exported="false"/>
+        <activity
+            android:name=".LoginAndSignup.Make_Selection"
+            android:exported="false"/>
+        <activity
+            android:name=".LoginAndSignup.Forgot_Password"
+            android:exported="false"/>
+        <activity
+            android:name=".LoginAndSignup.OTP_PinView"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".LoginAndSignup.RetailerSignup"
+            android:exported="false" />
+        <activity
             android:name=".LoginAndSignup.RetailerLoginAndSignup"
-            android:theme="@style/Theme.LoginAndSignup"
             android:exported="false" />
         <activity
             android:name=".LoginAndSignup.RetailerLogin"
-            android:theme="@style/Theme.LoginAndSignup"
             android:exported="false" />
         <activity
             android:name=".AllCategoriesActivity"

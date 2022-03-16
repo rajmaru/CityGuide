@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 public class AllCategoriesActivity extends AppCompatActivity {
@@ -22,7 +21,7 @@ public class AllCategoriesActivity extends AppCompatActivity {
     }
 
     private void hooks() {
-        backBtn = findViewById(R.id.backBtn);
+        backBtn = findViewById(R.id.backBtn_RetailerLogin);
     }
 
     private void backBtnClicked() {

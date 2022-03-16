@@ -4,5 +4,5 @@
     <item android:color="@color/colorSecondary"  android:state_focused="true"/>
 
     <!-- Normal -->
-    <item android:color="@color/light_gray"/>
+    <item android:color="#A09595"/>
 </selector>

@@ -22,7 +22,6 @@
             android:id="@+id/featured_card_image"
             android:layout_width="0dp"
             android:layout_height="135dp"
-            android:layout_marginTop="4dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

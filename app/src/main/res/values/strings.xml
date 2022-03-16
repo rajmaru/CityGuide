@@ -19,4 +19,6 @@
     <string name="Female">Female</string>
     <string name="Others">Others</string>
     <string name="PhoneNumber">Phone Number</string>
+    <string name="New_Password">New Password</string>
+    <string name="Confirm_Password">Confirm Password</string>
 </resources>

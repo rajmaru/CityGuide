@@ -29,16 +29,16 @@ public class OnBoardingScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding_screen);
 
-        dotsLayout = findViewById(R.id.linearLayout);
-        startBtn = findViewById(R.id.startBtn);
+        dotsLayout = findViewById(R.id.linearLayout_OnBoardingScreen);
+        startBtn = findViewById(R.id.startBtn_OnBoardingScreen);
 
         ArrayList<Sliderdata> sliderdata = new ArrayList<>();
-        sliderdata.add(new Sliderdata((R.drawable.first_img), "Search Your Location"));
-        sliderdata.add(new Sliderdata((R.drawable.second_img), "Make A Call"));
-        sliderdata.add(new Sliderdata((R.drawable.third_img), "Add Missing Place"));
-        sliderdata.add(new Sliderdata((R.drawable.fourth_img), "Sit Back And Enjoy"));
+        sliderdata.add(new Sliderdata((R.drawable.onboarding_first_img), "Search Your Location"));
+        sliderdata.add(new Sliderdata((R.drawable.onboarding_second_img), "Make A Call"));
+        sliderdata.add(new Sliderdata((R.drawable.onboarding_third_img), "Add Missing Place"));
+        sliderdata.add(new Sliderdata((R.drawable.onboarding_fourth_img), "Sit Back And Enjoy"));
 
-        viewPager = findViewById(R.id.slider);
+        viewPager = findViewById(R.id.slider_OnBoardingScreen);
         adapter = new SliderAdapter(this, sliderdata);
         viewPager.setAdapter(adapter);
 
@@ -52,11 +52,14 @@ public class OnBoardingScreen extends AppCompatActivity {
                 changeDots(position);
             }
         });
-    }
 
-    public void moveToDashboard(View view) {
-        startActivity(new Intent(this, UserDashboard.class));
-        finish();
+        startBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OnBoardingScreen.this, UserDashboard.class));
+                finish();
+            }
+        });
     }
 
     private void addDots() {
@@ -65,7 +68,7 @@ public class OnBoardingScreen extends AppCompatActivity {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(35);
-            dots[i].setTextColor(getResources().getColor(R.color.light_gray));
+            dots[i].setTextColor(getResources().getColor(R.color.light_white));
             dotsLayout.addView(dots[i]);
         }
     }
@@ -73,9 +76,9 @@ public class OnBoardingScreen extends AppCompatActivity {
     private void changeDots(int position) {
         for (int i = 0; i < dots.length; i++) {
             if (i == position) {
-                dots[position].setTextColor(getResources().getColor(R.color.colorPrimary));
+                dots[position].setTextColor(getResources().getColor(R.color.colorSecondary));
             }else{
-                dots[i].setTextColor(getResources().getColor(R.color.light_gray));
+                dots[i].setTextColor(getResources().getColor(R.color.light_white));
             }
             if (position == dots.length - 1) {
                 startBtn.setVisibility(View.VISIBLE);

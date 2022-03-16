@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Navigation Theme -->
-    <style name="navigationTheme" parent="Widget.Material3.DrawerLayout">
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorControlHighlight">#E42E50</item>
-        <item name="checkedIconTint">@color/white</item>
-        <item name="android:textColorSecondary">@color/black</item>
-        <item name="android:textColorPrimary">@color/black</item>
-    </style>
-
     <!-- EditText Theme -->
     <style name="EditText.Color" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/textinput_boxstroke_color</item>
-        <item name="iconTint">@color/textinput_boxstroke_color</item>
+        <item name="startIconTint">@color/textinput_boxstroke_color</item>
+        <item name="endIconTint">@color/textinput_boxstroke_color</item>
     </style>
 
     <!-- Shapeable ImageView -->
     <style name="ShapeAppearanceOverlay.App.CornerSize5percent" parent="">
-        <item name="cornerSize">5%</item>
+        <item name="cornerSize">3%</item>
+    </style>
+
+    <!-- Button -->
+    <style name="Button.theme" parent="ThemeOverlay.Material3.Button.ElevatedButton">
+        <item name="backgroundTint">@color/colorSecondary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="rippleColor">@color/colorOnPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="fontFamily">@font/gilroy_bold</item>
     </style>
 
 </resources>

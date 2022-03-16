@@ -3,19 +3,19 @@
 
     <group android:checkableBehavior="single">
 
-        <item android:id="@+id/nav_home"
+        <item android:id="@+id/navHomeBtn"
             android:icon="@drawable/ic_nav_home"
             android:title="Home"/>
 
-        <item android:id="@+id/nav_search"
+        <item android:id="@+id/navSearchBtn"
             android:icon="@drawable/ic_search"
             android:title="Search"/>
 
-        <item android:id="@+id/nav_allCategories"
+        <item android:id="@+id/navAllCategoriesBtn"
         android:icon="@drawable/ic_nav_allcategories"
         android:title="All Categories"/>
 
-        <item android:id="@+id/nav_addMissingPlace"
+        <item android:id="@+id/navAddMissingPlaceBtn"
             android:icon="@drawable/ic_nav_addlocation"
             android:title="Add Missing Place"/>
 
@@ -28,15 +28,15 @@
             <group android:checkableBehavior="single">
 
                 <item android:title="Log in"
-                    android:id="@+id/nav_login"
+                    android:id="@+id/navLoginBtn"
                     android:icon="@drawable/ic_nav_login"/>
 
                 <item android:title="Profile"
-                    android:id="@+id/nav_profile"
+                    android:id="@+id/navProfileBtn"
                     android:icon="@drawable/ic_nav_profile"/>
 
                 <item android:title="Log out"
-                    android:id="@+id/nav_logout"
+                    android:id="@+id/navLogoutBtn"
                     android:icon="@drawable/ic_nav_logout"/>
 
             </group>
@@ -52,19 +52,19 @@
             <group android:checkableBehavior="single">
 
                 <item android:title="Restaurants"
-                    android:id="@+id/nav_restaurants"
+                    android:id="@+id/navRestaurantsBtn"
                     android:icon="@drawable/ic_restaurant"/>
 
                 <item android:title="Hotels"
-                    android:id="@+id/nav_hotels"
+                    android:id="@+id/navHotels"
                     android:icon="@drawable/ic_hotel"/>
 
                 <item android:title="Education"
-                    android:id="@+id/nav_education"
+                    android:id="@+id/navEducationBtn"
                     android:icon="@drawable/ic_education"/>
 
                 <item android:title="Shops"
-                    android:id="@+id/nav_shops"
+                    android:id="@+id/navShops"
                     android:icon="@drawable/ic_shop"/>
 
             </group>
@@ -80,11 +80,11 @@
             <group android:checkableBehavior="none">
 
                 <item android:title="Share"
-                    android:id="@+id/nav_share"
+                    android:id="@+id/navShare"
                     android:icon="@drawable/ic_nav_share"/>
 
                 <item android:title="Rate us"
-                    android:id="@+id/nav_rateus"
+                    android:id="@+id/navRateUs"
                     android:icon="@drawable/ic_nav_rateus"/>
 
             </group>

@@ -2,12 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="text_black">#212020</color>
-    <color name="light_gray">#504D4D</color>
+    <color name="light_gray">#A09595</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_white">#D7D0D0</color>
 
     <color name="colorPrimary">#F9F7F7</color>
     <color name="colorOnPrimary">#3F72AF</color>
-    <color name="colorSecondary">#112D4E</color>
+    <color name="colorSecondary">#123C6E</color>
     <color name="colorOnSecondary">#DBE2EF</color>
 
 </resources>

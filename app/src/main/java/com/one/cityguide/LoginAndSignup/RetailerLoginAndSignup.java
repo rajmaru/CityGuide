@@ -7,43 +7,57 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.google.android.material.button.MaterialButton;
 import com.one.cityguide.R;
+import com.one.cityguide.User.UserDashboard;
 
 public class RetailerLoginAndSignup extends AppCompatActivity {
 
     ImageView backBtn;
-    Button login, signup;
+    MaterialButton loginBtn, signupBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retailer_login_signup);
 
-        login = findViewById(R.id.retailer_login_btn);
-        signup = findViewById(R.id.retailer_signup_btn);
-        backBtn = findViewById(R.id.backBtn);
+        loginBtn = findViewById(R.id.loginBtn_RetailerLoginSignup);
+        signupBtn = findViewById(R.id.signupBtn_RetailerLoginSignup);
+        backBtn = findViewById(R.id.backBtn_RetailerLoginSignup);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RetailerLoginAndSignup.super.onBackPressed();
+                startActivity(new Intent(RetailerLoginAndSignup.this, UserDashboard.class));
+                finishAffinity();
             }
         });
 
-        login.setOnClickListener(new View.OnClickListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RetailerLoginAndSignup.this, RetailerLogin.class));
+                Intent intent = new Intent(RetailerLoginAndSignup.this, RetailerLogin.class);
+                intent.putExtra("type","loginsignup");
+                startActivity(intent);
+                finishAffinity();
             }
         });
 
-        signup.setOnClickListener(new View.OnClickListener() {
+        signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(RetailerLoginAndSignup.this, RetailerSignup.class));
+                finishAffinity();
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(RetailerLoginAndSignup.this, UserDashboard.class));
+        finishAffinity();
     }
 }

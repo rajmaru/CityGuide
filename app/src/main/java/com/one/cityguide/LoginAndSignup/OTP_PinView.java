@@ -11,6 +11,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mukesh.OtpView;
@@ -22,18 +23,22 @@ public class OTP_PinView extends AppCompatActivity {
     OtpView otpView;
     Button verify;
     ImageView backBtn;
+    String _phonenumber;
+    TextView phonenumberText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_pin_view);
 
+        hooks();
+
         Bundle bundle = getIntent().getExtras();
         boolean type = bundle.getBoolean("type");
 
-        verify = findViewById(R.id.verify_OTPPinView);
-        backBtn= findViewById(R.id.backBtn_OTPPinView);
-        otpView = findViewById(R.id.otpText_OTPPinView);
+        _phonenumber = getIntent().getStringExtra("phonenumber");
+        phonenumberText.setText(_phonenumber);
+
         otpView.requestFocus();
 
         if(type){
@@ -60,5 +65,12 @@ public class OTP_PinView extends AppCompatActivity {
                 OTP_PinView.super.onBackPressed();
             }
         });
+    }
+
+    private void hooks() {
+        verify = findViewById(R.id.verify_OTPPinView);
+        backBtn= findViewById(R.id.backBtn_OTPPinView);
+        otpView = findViewById(R.id.otpText_OTPPinView);
+        phonenumberText = findViewById(R.id.phonenumberText_OTPPinView);
     }
 }

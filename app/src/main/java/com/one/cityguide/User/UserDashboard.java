@@ -67,6 +67,7 @@ public class UserDashboard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(UserDashboard.this, RetailerLoginAndSignup.class));
+                finishAffinity();
             }
         });
 
@@ -86,7 +87,6 @@ public class UserDashboard extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.navAllCategoriesBtn) {
                     startActivity(new Intent(UserDashboard.this, AllCategoriesActivity.class));
-                    finishAffinity();
                 } else if (item.getItemId() == R.id.navLoginBtn) {
                     Intent intent = new Intent(UserDashboard.this, RetailerLogin.class);
                     intent.putExtra("type", "userdashboard");
